@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid magenta;
+  background-color: rgb(27, 24, 24);
+  color: white;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Highscore Button*/
+ button {
+  outline: none;
+  
+  font-size: 1.5rem;
+  float: left;
+}
+
+/* Outer Container Section*/
+.outer-cont {
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+/*Top-Bar Container*/
+
+/*Timer Section*/
+.timer {
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 3px;
+  background-color: rgb(61, 63, 63);
+}
+
+.timer p {
+  float: right;
+}
+
+/* Inner Container Section */
+.inner-cont {
+  border-radius: 1.5rem;
+  background-color:rgb(61, 63, 63);
+  height: 50%;
+  width: 50%;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.inner-cont p {
+  margin: auto;
+  font-size: 20px;
+  background-color: rgb(61, 63, 63);
+}
+
+/* Header/Quiz Intro Section */
+h1, h2 {
+  color: aqua;
+  background-color: rgb(61, 63, 63);
+}
+
+.quiz-intro {
+  margin-bottom: 10vh;
+}
+
+
+
+/* Main Quiz Content */
+
