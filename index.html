@@ -8,23 +8,92 @@
   </head>
 
   <body>
-    <div class="outer-cont">
+    <div id="gradient"></div>
+    <div class="high-scores">
+      <button class="dropdown-btn">View Highscores<span>&#8681</span></button>
+      <div class="scores">
+        <h2>Highscores:</h2>
+        <ol>
+          <li>CB - 10</li>
+          <li>CB - 10</li>
+          <li>CB - 10</li>
+          <li>CB - 10</li>
+          <li>CB - 10</li>
+          <li>CB - 10</li>
+      </ol>
+      </div>
+    </div>
 
-    <div class="top-bar">
-      <button>View Highscores</button>
-        
-  </div>
-    
-
-  <div class="inner-cont">
-    <section class="timer"><p>Time Left: 00:00</p></section>
-    <header class="quiz-intro">
-      <h1>Coding Quiz</h1>
-      <p>Ready to start? Just press the start button!</p>
-    </header>
+  <div class="start-btn"><button>Start Quiz</button></div>
+  
+    <div class="info-box">
+      <header class="quiz-intro">
+        <h1>Coding Quiz - Rules</h1>
+      </header>
+      <div class="info-list">
+        <div class="info">You have<span>15</span> seconds for each question</div>
+        <div class="info">If answered incorrectly, you will suffer a penalty of <span>5</span>seconds for each following question</div>
+        <div class="info">Answers cannot be changed once entered</div>
+        <div class="info">If the timer reaches <span>0</span>, the quiz is over and your score will be entered</div>
+        <div class="info">Most of all, have fun, and don't forget to submit your score!</div>
+      </div>
+      <div class="buttons">
+        <button class="quit">Quit</button>
+        <button class="retry">Continue</button>
+      </div>
+    </div>
+      
 
     <main>
+<div class="questions">
+  <header>
+  <h2><span>What does CSS stand for?</span></h2>
+  <div class="timer">
+  <div class="timer-txt">Time Left:</div>
+    <div class="timer-sec">30</div>
+  </div>
+  </header>
 
+  <section>
+  <div class="answers">
+  <div class="option">
+    <span>Corrosive spinal stimulants</span>
+    <div class="icon tick"><span>&#9989</span></div>
+  </div>
+  <div class="option">
+    <span>Cascading scale sheets</span>
+    <div class="icon cross"><span>&#10060</span></div>
+  </div>
+<div class="option">
+  <span>Cascading style sheets</span>
+</div>
+<div class="option">
+  <span>Why are you asking me? You're the big "Mr. Coder"</span>
+</div>
+  </section>
+
+  <footer>
+    <div class="total-que">
+      <span><p>2</p> <p>Of</p> <p>5</p> <p>Questions</p></span>
+    </div>
+    <button class="next-btn">Next Question</button>
+    </div>
+  </footer>
+
+<section class="finish-screen">
+  <div class="icon"><span>&#128081</span></div>
+  <div class="finish-txt">You Finished!</div>
+  <div class="score"><span>Your Score: 00</span></div>
+  <div class="buttons">
+  <button class="retry">Retry</button>
+  <button class="quit">Quit</button>
+  </div>
+  <form>
+    <label for="">Your Initials:</label>
+    <input type="text">
+    <button class="submit">Submit Score</button>
+  </form>
+</section>
 
     </main>
   </div>
