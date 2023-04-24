@@ -64,12 +64,21 @@
 /* Start Button/Quiz Window Positioning */
 .start-btn,
 .info-box,
-.questions,
+.quiz-box,
 .finish-screen {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.info-box.activeInfo,
+.quiz-box.activeQuiz {
+  z-index: 5;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /* Start Button Styling */
@@ -93,10 +102,12 @@ transition: all 0.3s ease;
 
 
 .info-box {
-  display: none;
   width: 540px;
   background:white;
   border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .info-box .quiz-intro {
@@ -165,14 +176,16 @@ transition: all 0.3s ease;
   color:#0263ca;
 }
 
-.questions {
-  display: none;
+.quiz-box {
   width: 550px;
   background: #fff;
   border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
-.questions header {
+.quiz-box header {
   position: relative;
   z-index: 99;
   height:70px;
@@ -185,12 +198,12 @@ transition: all 0.3s ease;
   box-shadow: 0px 3px 5px 1px rgb(40, 35, 35);
 }
 
-.questions header h2 {
+.quiz-box header span {
   font-size: 20px;
   font-weight: 600;
 }
 
-.questions header .timer {
+.quiz-box header .timer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -202,13 +215,13 @@ transition: all 0.3s ease;
   padding: 0 8px;
 }
 
-.questions header .timer .timer-txt {
+.quiz-box header .timer .timer-txt {
   font-weight: 500;
   font-size: 18px;
   user-select: none;
 }
 
-.questions header .timer .timer-sec {
+.quiz-box header .timer .timer-sec {
   font-size: 18px;
   font-weight: 800;
   background: #4d545b;
@@ -222,17 +235,17 @@ transition: all 0.3s ease;
   user-select: none;
 }
 
-.questions .section {
+.quiz-box .section {
   padding: 25px 30px 20px 30px;
   background: #fff;
 }
 
-.questions h2 span {
+.quiz-box h2 span {
   font-size: 25px;
   font-weight: 600;
 }
 
-.questions .answers {
+.quiz-box .answers {
   margin: 0 10px;
   padding: 20px 0;
   display: block;
@@ -262,7 +275,24 @@ section .answers .option:hover {
   border-color: #b8daff;
 }
 
- .questions footer {
+section .answers .option.correct {
+color: #1f9712;
+background: #d4eddd;
+border-color: #c3e6cb;
+}
+
+section .answers .option.incorrect {
+  color: rgb(242, 18, 18);
+  background: rgb(228, 142, 142);
+  border-color: rgb(228, 161, 161);
+}
+
+section .answers .option.disabled {
+  cursor: none;
+  pointer-events: none;
+}
+
+ .quiz-box footer {
   height: 60px;
   width: 100%;
   padding: 0 30px;
@@ -271,7 +301,7 @@ section .answers .option:hover {
   justify-content: space-between;
 }
 
-.questions footer .total-que span {
+.quiz-box footer .total-que span {
   display: flex;
   user-select: none;
 }

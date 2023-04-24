@@ -8,7 +8,9 @@
   </head>
 
   <body>
+    <!--Provides background-color gradient-->
     <div id="gradient"></div>
+    <!-- Dropdown menu for highscores -->
     <div class="high-scores">
       <button class="dropdown-btn">View Highscores<span>&#8681</span></button>
       <div class="scores">
@@ -24,8 +26,11 @@
       </div>
     </div>
 
+
+  <!-- Start Button -->
   <div class="start-btn"><button>Start Quiz</button></div>
-  
+    
+    <!-- Info Box -->
     <div class="info-box">
       <header class="quiz-intro">
         <h1>Coding Quiz - Rules</h1>
@@ -45,9 +50,9 @@
       
 
     <main>
-<div class="questions">
+<div class="quiz-box">
   <header>
-  <h2><span>What does CSS stand for?</span></h2>
+  <div class="question-txt"></div>
   <div class="timer">
   <div class="timer-txt">Time Left:</div>
     <div class="timer-sec">30</div>
@@ -56,25 +61,15 @@
 
   <section>
   <div class="answers">
-  <div class="option">
-    <span>Corrosive spinal stimulants</span>
-    <div class="icon tick"><span>&#9989</span></div>
-  </div>
-  <div class="option">
-    <span>Cascading scale sheets</span>
-    <div class="icon cross"><span>&#10060</span></div>
-  </div>
-<div class="option">
-  <span>Cascading style sheets</span>
-</div>
-<div class="option">
-  <span>Why are you asking me? You're the big "Mr. Coder"</span>
-</div>
+    <div class="check"><span>&#9989</span></div>
+  
+    <div class="cross"><span>&#10060</span></div>
+  
   </section>
 
   <footer>
     <div class="total-que">
-      <span><p>2</p> <p>Of</p> <p>5</p> <p>Questions</p></span>
+      <!--<span><p>2</p> <p>Of</p> <p>5</p> <p>Questions</p></span>-->
     </div>
     <button class="next-btn">Next Question</button>
     </div>
@@ -99,5 +94,6 @@
   </div>
     </div>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/questions.js"></script>
   </body>
 </html>
