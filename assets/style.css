@@ -74,7 +74,8 @@
 }
 
 .info-box.activeInfo,
-.quiz-box.activeQuiz {
+.quiz-box.activeQuiz,
+.finish-screen.activeFin {
   z-index: 5;
   opacity: 1;
   pointer-events: auto;
@@ -235,6 +236,15 @@ transition: all 0.3s ease;
   user-select: none;
 }
 
+.quiz-box header .time-line {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  width: 0;
+  background: #ff0000;
+}
+
 .quiz-box .section {
   padding: 25px 30px 20px 30px;
   background: #fff;
@@ -316,6 +326,7 @@ footer .total-que span p:first-child {
 }
 
 footer .next-btn {
+  display: none;
   height: 40px;
   padding: 0 13px;
   margin-bottom: 5px;
@@ -336,16 +347,16 @@ footer .next-btn:hover {
 }
 
 .finish-screen {
+  display: flex;
   background: #fff;
   width: 450px;
  padding: 25px 30px;
  border-radius: 5px;
- display: flex;
  text-align: center;
  align-items: center;
  flex-direction: column;
  justify-content: space-between;
- display: none;
+ transition: all 0.3s ease;
 }
 
 .finish-screen .icon {
@@ -367,12 +378,13 @@ footer .next-btn:hover {
 .finish-screen .buttons {
   display: flex;
   margin: 20px 0;
+  text-align: center;
 }
 
 .finish-screen .buttons button {
   margin: 0 10px;
   height: 45px;
-  padding: 0 20px;
+  padding: 0 100px;
   border: none;
   outline: none;
   font-size: 18px;

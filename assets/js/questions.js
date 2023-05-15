@@ -38,7 +38,7 @@ let questions = [
 {
     numb: 4,
     question: "What does HTML stand for?",
-    answer: "Hypertext Markup Language",
+    answer: "Hyper Text Markup Language",
     options: [
         "Hovering Text Market Lights",
         "Hickory-smoked Thick Meat Legs",
