@@ -27,39 +27,25 @@ THEN I can save my initials and my score
 - - - -
 
 ### Description
-
-
-### Tasks Completed
-*
-*
-*
-*
-*
-*
+A simple quiz app built using HTML, CSS and JavaScript.
 
 ### Usage
-f
+Click the deployed link to load the app. Then click "start" to start the quiz.
 
 - - - -
 <p align = "center">
-<img src = "">
+<img src = "https://ibb.co/mC9Fqj2">
 </p>
 
 - - - -
 
-### Provided Links
-
-
 ### Credits
-
+Staff and TA's at 2023 Spring/Summer KU Coding Bootcamp.
 
 ### Other Guides/Sources
-*
-*
-*
-*
-*
-*
-*
+* https://www.geeksforgeeks.org/how-to-create-a-simple-javascript-quiz/
+* https://www.youtube.com/watch?v=DFhmNLKwwGw
+* https://www.youtube.com/watch?v=AFTvxsVv52k
+* https://www.youtube.com/watch?v=pQr4O1OITJo
 
 - - - -

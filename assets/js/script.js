@@ -1,7 +1,4 @@
-// collecting required HTML elements
-const highScores = document.querySelector(".high-scores");
-const dropdown = document.querySelector(".dropdown-btn");
-const scores = document.querySelector(".score");
+// Collecting required HTML elements //
 const startBtn = document.querySelector(".start-btn button");
 const infoBox = document.querySelector(".info-box");
 const quitBtn = infoBox.querySelector(".buttons .quit");
@@ -14,9 +11,13 @@ const timeLine = quizBox.querySelector(".timer .time-line");
 const bottomQueCounter = document.querySelector("footer .total-que");
 const answers = document.querySelector(".answers");
 
+// ------------------------------------------------------------------------------------------------------- //
 
+// Shows and hides dropdown menu with highscores //
+const highScores = document.querySelector(".high-scores");
+const dropdown = document.querySelector(".dropdown-btn");
+const scores = document.querySelector(".scores");
 
-//Shows and hides dropdown menu with highscores //
 function showScores() {
     if (scores.style.display === "none") {
         scores.style.display = "block";
@@ -27,19 +28,18 @@ function showScores() {
 }
 dropdown.addEventListener("click", showScores);
 
-
-// Shows info screen if start button is clicked //
  startBtn.onclick = ()=> {
     infoBox.classList.add("activeInfo");
  }
 
+// ------------------------------------------------------------------------------------------------------- //
 
  // Hides info screen if quit button is clicked //
  quitBtn.onclick = ()=> {
 infoBox.classList.remove("activeInfo");
  }
 
- // if continue button is clicked //
+ // ... if continue button is clicked //
  continueBtn.onclick = ()=> {
     infoBox.classList.remove("activeInfo"); // hides info screen //
     quizBox.classList.add("activeQuiz"); // shows quiz box //
@@ -58,7 +58,10 @@ const restartQuiz = finishScreen.querySelector(".buttons .retry");
 let userScore = 0;
 
 const nextBtn = quizBox.querySelector("footer .next-btn");
-// if Next Question button is clicked //
+
+// ------------------------------------------------------------------------------------------------------- //
+
+// Displays the next question if Next Question button is clicked //
 nextBtn.onclick =()=> {
     if (questionCnt < questions.length - 1) {
         questionCnt++;
@@ -79,7 +82,7 @@ nextBtn.onclick =()=> {
     }
 }
 
-// getting questions and corresponding answers from questions.js array //
+// Getting questions and corresponding answers from questions.js array //
 function showQuestions(index) {
     const questionTxt = document.querySelector(".question-txt");
     let questionTag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
@@ -138,6 +141,9 @@ let totalQueCntTag = '<span><p>'+ index +'</p> <p>Of</p> <p>'+ questions.length 
 bottomQueCounter.innerHTML = totalQueCntTag; 
 }
 
+// ------------------------------------------------------------------------------------------------------- //
+
+// Displays the finish screen once all questions are answered //
 finishScreen.style.display = "none";
 
 function showResultBox() {
@@ -149,12 +155,41 @@ function showResultBox() {
     scores.innerHTML = score;
 }
 
-function retryQuiz() {
-    finishScreen.classList.remove("activeFin");
+
+// Collecting input information to send to local storage
+// Function to add an item to local storage
+const username = document.getElementById("name");
+const endScore = scores.innerHTML;
+function addToLocalStorage(username, endScore) {
+  if (typeof username !== 'string' || typeof endScore !== 'string') {
+    console.error('username and endScore must be strings');
+    return;
+  }
+
+  localStorage.setItem(username, endScore);
+  console.log(`Item '${username}' successfully added to local storage.`);
 }
 
+// Function to retrieve an item from local storage
+function getFromLocalStorage(username) {
+  if (typeof username !== 'string') {
+    console.error('username must be a string');
+    return;
+  }
+
+  const endScore = localStorage.getItem(username);
+  if (endScore === null) {
+    console.log(`Item '${username}' not found in local storage.`);
+    return;
+  }
+
+  console.log(`Item '${username}' retrieved from local storage: ${endScore}`);
+  return endScore;
+}
+
+// Returns user to starting screen if restartQuiz button clicked
 restartQuiz.onclick = ()=> {
-    retryQuiz();
+    window.location.reload();
 }
 
 function startTimer(time) {
@@ -183,11 +218,4 @@ function startTimerLine(time) {
             timeCount.textContent = "00";
         }
     }
-}
-
-var userName = document.getElementById("#name");
-var scoreSubmit = document.getElementsByClassName(".submit");
-
-function formSubmission() {
-alert(userName, scoreSubmit);
 }

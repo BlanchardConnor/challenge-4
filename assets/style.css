@@ -13,7 +13,7 @@
 .high-scores  {
   position: absolute;
   left: 50%;
-  top: 10%;
+  top: 25%;
   transform: translate(-50%, -50%);
 }
 
@@ -22,9 +22,9 @@
   margin: 5px;
   font-size: 18px;
   font-weight: 500;
-  border: 2px solid #007bff;
+  border: 2px solid rgb(150, 0, 0);
   border-radius: 5px;
-  color: #0263ca;
+  color: red;
   cursor: pointer;
 }
 
@@ -32,21 +32,23 @@
   margin-left: 5px;
   font-size: 20px;
   font-weight: 600;
-  background-color:#84c5fe;
+  /* background-color:rgb(217, 106, 106);
   border: none;
-  border-radius: 20px;
+  border-radius: 20px; */
 }
 
 .high-scores .dropdown-btn:hover, .dropdown-btn:focus {
-  color:#fff;
-  background-color:#0263ca;
+  color:#ff0000;
+  background-color:#131314;
+  transition: all 0.3s ease;
 }
 
 .high-scores .scores {
   display: none;
-  border: 2px solid #007bff;
+  border: 2px solid rgb(150, 0, 0);
   text-align: center;
-  background: #fff;
+  background: black;
+  color: rgb(255, 0, 0);
   font-size: 18px;
   font-weight: 500;
   border-radius: 5px;
@@ -55,7 +57,7 @@
 
 .high-scores .scores h2 {
   margin-bottom: 5px;
-  border-bottom: 3px solid #004085;
+  border-bottom: 3px solid #a61717d7;
 }
 
 .high-scores .scores ol {
@@ -86,7 +88,7 @@
 .start-btn button{
 font-size: 25px;
 font-weight: 500;
-color:#0263ca;
+color:red;
 padding: 15px 30px;
 outline: none;
 border: none;
@@ -97,8 +99,8 @@ transition: all 0.3s ease;
 }
 
 .start-btn button:hover {
-  color:#fff;
-  background: #0263ca;
+  color:#ff0000;
+  background: #000000;
 }
 
 
@@ -114,7 +116,7 @@ transition: all 0.3s ease;
 .info-box .quiz-intro {
   height: 60px;
   width: 100%;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px rgb(150, 0, 0);
   display: flex;
   align-items: center;
   padding: 0 35px;
@@ -133,7 +135,7 @@ transition: all 0.3s ease;
 
 .info-box .info-list .info span {
   font-weight: 600;
-  color: #007bff;
+  color: #ff0000;
   padding: 3px;
 }
 
@@ -143,14 +145,14 @@ transition: all 0.3s ease;
   align-items: center;
   justify-content: flex-end;
   padding: 0 35px;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid rgb(150, 0, 0);
 }
 
 .info-box .buttons button{
 margin: 0 5px;
 height: 40px;
 width: 100px;
-border: 1px solid  #007bff;
+border: 1px solid rgb(150, 0, 0);
 border-radius: 5px;
 color: white;
 font-size: 16px;
@@ -160,21 +162,21 @@ transition: all 0.3s ease;
 }
 
 .buttons button.quit {
-  color:  #007bff;
+  color:  #ff0000;
 }
 
 .buttons button.quit:hover {
   color: #fff;
-  background: #007bff;
+  background: #ff0000;
 }
 
 .buttons button.retry {
   color:  #fff;
-  background: #007bff;
+  background: #ff0000;
 }
 
 .buttons button.retry:hover {
-  color:#0263ca;
+  color:rgb(0, 0, 0);
 }
 
 .quiz-box {
@@ -210,8 +212,9 @@ transition: all 0.3s ease;
   justify-content: space-between;
   width: 145px;
   height: 45px;
-  background: #cce5ff;
-  border: 1px solid #b8daff;
+  color: red;
+  background: #000000;
+  border: 1px solid rgb(150, 0, 0);
   border-radius: 5px;
   padding: 0 8px;
 }
@@ -262,8 +265,8 @@ transition: all 0.3s ease;
 }
 
 section .answers .option{
-background: aliceblue;
-border: 1px solid #84c5fe;
+background: rgb(255, 255, 255);
+border: 1px solid rgb(150, 0, 0);
 border-radius: 5px;
 padding: 8px 15px;
 margin-bottom: 15px;
@@ -280,9 +283,9 @@ transition: all 0.3s ease;
 }
 
 section .answers .option:hover {
-  color: #004085;
-  background: #cce5ff;
-  border-color: #b8daff;
+  color: #ff0000;
+  background: #000000;
+  border-color: rgb(150, 0, 0);
 }
 
 section .answers .option.correct {
@@ -334,16 +337,16 @@ footer .next-btn {
   font-weight: 800;
   border: none;
   outline: none;
-  color: #fff;
-  background: #007bff;
+  background: #f9f9f9;
   border-radius: 5px;
-  border: 1px solid #007bff;
+  border: 1px solid rgb(150, 0, 0);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 footer .next-btn:hover {
-  background: #0263ca;
+  color: #ff0000;
+  background: #000000;
 }
 
 .finish-screen {
@@ -390,7 +393,7 @@ footer .next-btn:hover {
   font-size: 18px;
   font-weight: 500;
   border-radius: 5px;
-  border: 1px solid #007bff;
+  border: 1px solid rgb(150, 0, 0);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -409,7 +412,7 @@ form {
 
 form input {
   border-radius: 5px;
-  border-color: #0263ca;
+  border-color: rgb(150, 0, 0);
   font-size: 16px;
   font-weight: 500;
 }
@@ -421,14 +424,15 @@ form input:hover {
 form .submit{
   padding: 5px;
   margin-left: 10px;
-  background: #004085;
+  background: #ff0000;
   color: #fff;
   border-radius: 5px;
-  border: 1px solid #007bff;
+  border: 1px solid rgb(150, 0, 0);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form .submit:hover {
-  background: #0263ca;
+  background: #000000;
+  color: #ff0000;
 }
