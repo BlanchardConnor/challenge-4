@@ -34,7 +34,7 @@ Click the deployed link to load the app. Then click "start" to start the quiz.
 
 - - - -
 <p align = "center">
-<img src = "https://ibb.co/mC9Fqj2">
+<img src = "challenge-4\assets\images\quizapp.png">
 </p>
 
 [Deployed](https://blanchardconnor.github.io/challenge-4/)
